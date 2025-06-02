@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | Office Hub</title>
+    <meta name="description" content="Share your feedback about Office Hub products and services.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="fatileh.css">
+    <style>
+        :root {
+            --primary-brown: #5D4037;
+            --secondary-brown: #8D6E63;
+            --light-brown: #D7CCC8;
+            --dark-brown: #3E2723;
+            --gold: #D4AF37;
+            --cream: #EFEBE9;
+        }
+        
+        body {
+            background-color: var(--cream);
+            color: var(--dark-brown);
+        }
+        
+        .navbar {
+            background-color: var(--dark-brown) !important;
+        }
+        
+        .feedback-header {
+            background: linear-gradient(rgba(93, 64, 55, 0.9), rgba(93, 64, 55, 0.9)), url('../images/feedback-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .form-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--gold);
+        }
+        
+        .btn-primary {
+            background-color: var(--dark-brown);
+            border-color: var(--dark-brown);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-brown);
+            border-color: var(--primary-brown);
+        }
+        
+        .btn-outline-primary {
+            color: var(--dark-brown);
+            border-color: var(--dark-brown);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--dark-brown);
+            color: white;
+        }
+        
+        .rating-input {
+            display: none;
+        }
+        
+        .rating-label {
+            cursor: pointer;
+            font-size: 2rem;
+            color: var(--light-brown);
+        }
+        
+        .rating-input:checked ~ .rating-label,
+        .rating-label:hover,
+        .rating-label:hover ~ .rating-label {
+            color: var(--gold);
+        }
+        
+        .testimonials {
+            background-color: var(--light-brown);
+        }
+        
+        footer {
+            background-color: var(--dark-brown);
+        }
+        
+        .form-control:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+        }
+        
+        .nav-link.active {
+            color: var(--gold) !important;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.jpg" alt="Office Hub Logo" width="150">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="feedback.html">Feedback</a></li>
+                </ul>
+                <div class="d-flex">
+                    <a href="cart.html" class="btn btn-outline-light position-relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-gold">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Feedback Header -->
+    <header class="feedback-header text-white py-5">
+        <div class="container py-5 text-center">
+            <h1 class="display-4 fw-bold mb-3">Your Feedback Matters</h1>
+            <p class="lead mb-4">Help us improve our products and services</p>
+        </div>
+    </header>
+
+    <!-- Feedback Form Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="form-section">
+                        <h2 class="text-center mb-4">Share Your Experience</h2>
+                        
+                        <form id="feedbackForm" novalidate>
+                            <!-- Personal Information -->
+                            <div class="row mb-4">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                    <div class="invalid-feedback">
+                                        Please provide your first name.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                    <div class="invalid-feedback">
+                                        Please provide your last name.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="email" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid email address.
+                                </div>
+                            </div>
+                            
+                            <!-- Feedback Type -->
+                            <div class="mb-4">
+                                <label class="form-label">Feedback Type *</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="feedbackType" id="compliment" value="compliment" required>
+                                    <label class="form-check-label" for="compliment">
+                                        Compliment
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="feedbackType" id="suggestion" value="suggestion">
+                                    <label class="form-check-label" for="suggestion">
+                                        Suggestion
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="feedbackType" id="complaint" value="complaint">
+                                    <label class="form-check-label" for="complaint">
+                                        Complaint
+                                    </label>
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please select a feedback type.
+                                </div>
+                            </div>
+                            
+                            <!-- Product Rating -->
+                            <div class="mb-4">
+                                <label class="form-label">Product Quality Rating *</label>
+                                <div class="rating-container d-flex justify-content-between">
+                                    <input type="radio" id="star1" name="rating" value="5" class="rating-input" required>
+                                    <label for="star1" class="rating-label"><i class="fas fa-star"></i></label>
+                                    
+                                    <input type="radio" id="star2" name="rating" value="4" class="rating-input">
+                                    <label for="star2" class="rating-label"><i class="fas fa-star"></i></label>
+                                    
+                                    <input type="radio" id="star3" name="rating" value="3" class="rating-input">
+                                    <label for="star3" class="rating-label"><i class="fas fa-star"></i></label>
+                                    
+                                    <input type="radio" id="star4" name="rating" value="2" class="rating-input">
+                                    <label for="star4" class="rating-label"><i class="fas fa-star"></i></label>
+                                    
+                                    <input type="radio" id="star5" name="rating" value="1" class="rating-input">
+                                    <label for="star5" class="rating-label"><i class="fas fa-star"></i></label>
+                                </div>
+                                <div class="invalid-feedback d-block">
+                                    Please rate our product quality.
+                                </div>
+                            </div>
+                            
+                            <!-- Feedback Details -->
+                            <div class="mb-4">
+                                <label for="feedbackDetails" class="form-label">Your Feedback *</label>
+                                <textarea class="form-control" id="feedbackDetails" rows="5" required></textarea>
+                                <div class="invalid-feedback">
+                                    Please provide your feedback.
+                                </div>
+                            </div>
+                            
+                            <!-- Product Selection -->
+                            <div class="mb-4">
+                                <label for="product" class="form-label">Product (if applicable)</label>
+                                <select class="form-select" id="product">
+                                    <option value="" selected>Select a product...</option>
+                                    <option value="premium-pen">Premium Fountain Pen</option>
+                                    <option value="leather-journal">Leather-bound Journal</option>
+                                    <option value="ergonomic-stapler">Ergonomic Stapler</option>
+                                    <option value="whiteboard">Magnetic Whiteboard</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Contact Permission -->
+                            <div class="mb-4 form-check">
+                                <input type="checkbox" class="form-check-input" id="contactPermission">
+                                <label class="form-check-label" for="contactPermission">I agree to be contacted for follow-up regarding my feedback</label>
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg px-5">Submit Feedback</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">What Our Customers Say</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-quote-left fa-2x text-gold"></i>
+                            </div>
+                            <p class="card-text">"The quality of these pens is exceptional. I've been using them for my artwork and they perform beautifully."</p>
+                            <div class="rating mb-3">
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star text-gold"></i>
+                            </div>
+                            <h5 class="card-title">- Karen T.</h5>
+                            <p class="text-muted small">Artist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-quote-left fa-2x text-gold"></i>
+                            </div>
+                            <p class="card-text">"Our office switched to Office Hub supplies last year and we've seen a noticeable improvement in quality."</p>
+                            <div class="rating mb-3">
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star-half-alt text-gold"></i>
+                            </div>
+                            <h5 class="card-title">- Precious S.</h5>
+                            <p class="text-muted small">Office Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-quote-left fa-2x text-gold"></i>
+                            </div>
+                            <p class="card-text">"The customer service is outstanding and the products arrive quickly and well-packaged. Highly recommend!"</p>
+                            <div class="rating mb-3">
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star text-gold"></i>
+                            </div>
+                            <h5 class="card-title">- Lephatsimile N.</h5>
+                            <p class="text-muted small">Teacher</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <img src="images/logo.jpg" alt="Office Hub Logo" width="150" class="mb-3">
+                    <p>Providing quality stationery since 2010. Our mission is to bring joy to everyday writing and organization tasks.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="products.html" class="text-white">All Products</a></li>
+                        <li><a href="products.html#writing" class="text-white">Writing</a></li>
+                        <li><a href="products.html#paper" class="text-white">Paper</a></li>
+                        <li><a href="products.html#office" class="text-white">Office</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="blog.html" class="text-white">Blog</a></li>
+                        <li><a href="#" class="text-white">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 123 Stationery St, Officeville</p>
+                    <p><i class="fas fa-phone me-2"></i> (267) 76948693</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@officehub.com</p>
+                </div>
+            </div>
+            <hr class="my-4 bg-light-brown">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small">&copy; 2025 Office Hub. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small">Payment methods: <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i> <i class="fab fa-cc-paypal"></i></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="feedbackSuccessModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-gold text-white">
+                    <h5 class="modal-title">Thank You!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <i class="fas fa-check-circle fa-5x text-gold mb-4"></i>
+                    <h3>Feedback Submitted</h3>
+                    <p>We appreciate your input and will use it to improve our services.</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-dark-brown text-white" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Form validation
+        (function() {
+            'use strict';
+            
+            const form = document.getElementById('feedbackForm');
+            
+            form.addEventListener('submit', function(event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                } else {
+                    event.preventDefault();
+                    const modal = new bootstrap.Modal(document.getElementById('feedbackSuccessModal'));
+                    modal.show();
+                    form.reset();
+                    
+                    document.querySelectorAll('.rating-input').forEach(input => {
+                        input.checked = false;
+                    });
+                }
+                
+                form.classList.add('was-validated');
+            }, false);
+            
+            const ratingContainer = document.querySelector('.rating-container');
+            const ratingInputs = document.querySelectorAll('.rating-input');
+            const ratingFeedback = document.querySelector('.rating-container + .invalid-feedback');
+            
+            ratingContainer.addEventListener('click', function() {
+                let rated = false;
+                ratingInputs.forEach(input => {
+                    if (input.checked) rated = true;
+                });
+                
+                ratingFeedback.style.display = rated ? 'none' : 'block';
+            });
+        })();
+    </script>
+</body>
+</html>

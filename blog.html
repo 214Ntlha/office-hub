@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Office Hub</title>
+    <meta name="description" content="Stationery tips, product reviews, and creative ideas from Office Hub.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="fatileh.css">
+</head>
+<body>
+    <!-- Navigation (same as index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <!-- Same navigation as index.html -->
+    </nav>
+
+    <!-- Blog Header -->
+    <header class="blog-header py-5 bg-light">
+        <div class="container text-center">
+            <h1>Office Hub Blog</h1>
+            <p class="lead">Stationery tips, product reviews, and creative ideas</p>
+        </div>
+    </header>
+
+    <!-- Blog Content -->
+    <section class="blog-content py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Featured Post -->
+                    <article class="card mb-5">
+                        <img src="images/blogff.jpg" class="card-img-top" alt="Featured blog post">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-primary">Featured</span>
+                                <small class="text-muted">October 15, 2023</small>
+                            </div>
+                            <h2 class="card-title">The Art of Choosing the Perfect Pen</h2>
+                            <p class="card-text">Finding the right pen can transform your writing experience. In this comprehensive guide, we explore the different types of pens and how to select the perfect one for your needs.</p>
+                            <a href="blog-post.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Posts -->
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <article class="card h-100">
+                                <img src="images/blog1.jpeg" class="card-img-top" alt="Blog post image">
+                                <div class="card-body">
+                                    <small class="text-muted">September 28, 2023</small>
+                                    <h3 class="card-title">5 Must-Have Notebooks for Students</h3>
+                                    <p class="card-text">Discover our top notebook picks that combine functionality with style for the academic year.</p>
+                                    <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                                </div><article class="card h-100">
+                                <img src="images/blog2.jpeg" class="card-img-top" alt="Blog post image">
+                                <div class="card-body">
+                                    <small class="text-muted">September 28, 2023</small>
+                                    <h3 class="card-title">5 Must-Have Notebooks for Students</h3>
+                                    <p class="card-text">Discover our top notebook picks that combine functionality with style for the academic year.</p>
+                                    <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                                </div>
+
+                            </article>
+                        </div>
+                        <!-- More blog posts -->
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav aria-label="Blog pagination" class="mt-5">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title">Categories</h3>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="#">Stationery Tips</a>
+                                    <span class="badge bg-primary rounded-pill">14</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="#">Product Reviews</a>
+                                    <span class="badge bg-primary rounded-pill">8</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="#">Creative Ideas</a>
+                                    <span class="badge bg-primary rounded-pill">5</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="#">Organization</a>
+                                    <span class="badge bg-primary rounded-pill">7</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title">Popular Posts</h3>
+                            <div class="mb-3">
+                                <a href="#" class="d-flex text-decoration-none">
+                                    <img src="images/blogff.jpg" alt="Popular post" width="60" class="me-3">
+                                    <div>
+                                        <h6 class="mb-0">The Best Pens for Left-Handed Writers</h6>
+                                        <small class="text-muted">August 12, 2023</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- More popular posts -->
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Subscribe</h3>
+                            <p>Get the latest posts delivered to your inbox</p>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Your email" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-dark text-white py-5">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

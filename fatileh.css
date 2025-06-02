@@ -1,0 +1,325 @@
+/* Brown Color Theme Variables */
+:root {
+  --primary-brown: #6D4C41;       /* Deep brown */
+  --secondary-brown: #8D6E63;     /* Medium brown */
+  --light-brown: #D7CCC8;         /* Light brown */
+  --dark-brown: #4E342E;          /* Dark brown */
+  --accent-gold: #D4AF37;         /* Gold for accents */
+  --text-dark: #3E2723;           /* Dark text */
+  --text-light: #EFEBE9;          /* Light text */
+}
+
+/* Diamond Pattern Background */
+.diamond-bg {
+  background-color: var(--light-brown);
+  background-image: 
+    linear-gradient(45deg, var(--secondary-brown) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--secondary-brown) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--secondary-brown) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--secondary-brown) 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Playfair Display', serif;
+  color: var(--text-dark);
+  background-color: #F5F5F5;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--dark-brown);
+}
+
+/* Diamond Shape Classes */
+.diamond {
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent-gold);
+  transform: rotate(45deg);
+  display: inline-block;
+  margin: 0 10px;
+  position: relative;
+}
+
+.diamond-sm {
+  width: 20px;
+  height: 20px;
+}
+
+.diamond-lg {
+  width: 60px;
+  height: 60px;
+}
+
+.diamond-outline {
+  background-color: transparent;
+  border: 2px solid var(--accent-gold);
+}
+
+.diamond-content {
+  transform: rotate(-45deg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary-brown);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: var(--text-light) !important;
+}
+
+.nav-link {
+  color: var(--light-brown) !important;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent-gold) !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--dark-brown);
+  border-color: var(--dark-brown);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-brown);
+  border-color: var(--primary-brown);
+}
+
+.btn-outline-primary {
+  color: var(--dark-brown);
+  border-color: var(--dark-brown);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--dark-brown);
+  color: white;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(109, 76, 65, 0.8), rgba(109, 76, 65, 0.8)), 
+              url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--text-light);
+  padding: 6rem 0;
+  position: relative;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-image: url('../images/diamond-pattern.png');
+  background-size: 40px 40px;
+}
+
+/* Diamond Divider */
+.diamond-divider {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.diamond-divider .diamond {
+  margin: 0 -10px;
+}
+
+/* Product Cards */
+.product-card {
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  background-color: white;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.product-card .diamond-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+}
+
+.product-card .card-img-top {
+  transition: transform 0.5s ease;
+  border-bottom: 3px solid var(--accent-gold);
+}
+
+.product-card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+/* Diamond Rating System */
+.diamond-rating {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.diamond-rating .diamond {
+  margin: 0 5px;
+  background-color: var(--light-brown);
+}
+
+.diamond-rating .diamond.filled {
+  background-color: var(--accent-gold);
+}
+
+/* Diamond Feature Boxes */
+.feature-box {
+  background-color: white;
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid var(--light-brown);
+  transition: all 0.3s ease;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.feature-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: var(--accent-gold);
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box .diamond {
+  margin-bottom: 1rem;
+  background-color: var(--accent-gold);
+}
+
+/* Testimonials */
+.testimonial-card {
+  background-color: white;
+  padding: 2rem;
+  border-left: 5px solid var(--accent-gold);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.testimonial-card::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid white;
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark-brown);
+  color: var(--text-light);
+  padding: 4rem 0 2rem;
+  position: relative;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-image: url('../images/diamond-pattern.png');
+  background-size: 40px 40px;
+}
+
+footer a {
+  color: var(--light-brown);
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--accent-gold);
+  text-decoration: none;
+}
+
+/* Diamond Grid Background */
+.diamond-grid-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.diamond-grid-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/diamond-grid.png');
+  background-size: 200px 200px;
+  opacity: 0.05;
+  z-index: -1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .diamond-divider {
+    margin: 1rem 0;
+  }
+  
+  .diamond, .diamond-sm, .diamond-lg {
+    margin: 5px;
+  }
+}
+
+/* Diamond Animation */
+@keyframes diamondPulse {
+  0% { transform: rotate(45deg) scale(1); }
+  50% { transform: rotate(45deg) scale(1.1); }
+  100% { transform: rotate(45deg) scale(1); }
+}
+
+.diamond-pulse {
+  animation: diamondPulse 2s infinite;
+}
