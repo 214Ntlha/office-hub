@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Office Hub: Real Stationery for Everyone</title>
+    <meta name="description" content="Get in touch with Office Hub for inquiries, support, or feedback about our premium stationery products">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="fatileh.css">
+    
+    <style>
+        .contact-hero {
+            background: linear-gradient(rgba(93, 64, 55, 0.85), rgba(93, 64, 55, 0.85)), url('../images/contact-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .form-control:focus {
+            border-color: #D4AF37;
+            box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+        }
+        
+        .contact-card {
+            border-left: 4px solid #D4AF37;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (Consistent with other pages) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-brown fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.jpG" alt="Office Hub Logo" width="150">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                </ul>
+                <div class="d-flex">
+                    <a href="cart.html" class="btn btn-outline-light position-relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-gold">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="contact-hero text-white py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-3">We'd Love to Hear From You</h1>
+                    <p class="lead mb-4">Whether you have questions about our products or need assistance with your order, our team is ready to help.</p>
+                    <div class="diamond-divider"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Contact Information -->
+                <div class="col-lg-4">
+                    <div class="contact-card bg-white p-4 shadow-sm mb-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-circle bg-gold text-white me-3">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="h5 mb-0">Our Location</h3>
+                                <p class="text-muted mb-0">123 Stationery Street, Officeville</p>
+                            </div>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215209105336!2d-73.98784492423904!3d40.74844097138975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzU0LjQiTiA3M8KwNTknMTAuMiJX!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                                width="100%" 
+                                height="200" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy"
+                                aria-label="Map of Office Hub location"></iframe>
+                    </div>
+                    
+                    <div class="contact-card bg-white p-4 shadow-sm mb-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-circle bg-gold text-white me-3">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="h5 mb-0">Phone Support</h3>
+                                <p class="text-muted mb-0">Available 9am-5pm, Mon-Fri</p>
+                            </div>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-phone me-2 text-gold"></i> <a href="tel:+15551234567">(555) 123-4567</a></li>
+                            <li><i class="fas fa-fax me-2 text-gold"></i> (555) 123-4568</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="contact-card bg-white p-4 shadow-sm h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-circle bg-gold text-white me-3">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="h5 mb-0">Email Us</h3>
+                                <p class="text-muted mb-0">We respond within 24 hours</p>
+                            </div>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-inbox me-2 text-gold"></i> <a href="mailto:info@officehub.com">info@officehub.com</a></li>
+                            <li><i class="fas fa-headset me-2 text-gold"></i> <a href="mailto:support@officehub.com">support@officehub.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="col-lg-8">
+                    <div class="bg-white p-4 shadow-sm">
+                        <h2 class="mb-4">Send Us a Message</h2>
+                        <p class="text-muted mb-4">Have questions about our products? Need help with an order? Fill out the form below and we'll get back to you as soon as possible.</p>
+                        
+                        <form id="contactForm" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                    <div class="invalid-feedback">
+                                        Please provide your first name.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                    <div class="invalid-feedback">
+                                        Please provide your last name.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid email address.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" aria-describedby="phoneHelp">
+                                    <div id="phoneHelp" class="form-text">Optional, but helpful if we need to call you</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label">Subject *</label>
+                                    <select class="form-select" id="subject" required>
+                                        <option value="" selected disabled>Select a subject</option>
+                                        <option value="order">Order Inquiry</option>
+                                        <option value="product">Product Question</option>
+                                        <option value="shipping">Shipping Information</option>
+                                        <option value="returns">Returns & Exchanges</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select a subject.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Your Message *</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                    <div class="invalid-feedback">
+                                        Please enter your message.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="newsletter">
+                                        <label class="form-check-label" for="newsletter">
+                                            Subscribe to our newsletter for stationery tips and special offers
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- FAQ Section -->
+                    <div class="bg-white p-4 shadow-sm mt-4">
+                        <h2 class="mb-4">Frequently Asked Questions</h2>
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        What are your shipping options?
+                                    </button>
+                                </h3>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        We offer standard (3-5 business days), expedited (2 business days), and overnight shipping. International shipping available to select countries.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Can I return or exchange products?
+                                    </button>
+                                </h3>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Yes! We accept returns within 30 days of purchase for unused products in original packaging. See our <a href="#">Returns Policy</a> for details.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Do you offer bulk discounts?
+                                    </button>
+                                </h3>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Absolutely. Orders over $500 qualify for 10% off, and over $1000 for 15% off. <a href="mailto:sales@officehub.com">Contact our sales team</a> for custom quotes.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>Our Customer Service Team</h2>
+                <div class="diamond-divider"></div>
+                <p class="lead">Meet the people dedicated to helping you</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="team-card text-center bg-white p-4 shadow-sm h-100">
+                        <img src="images/teamm.jpg" alt="Precious Segolame - Customer Support" class="rounded-circle mb-3 img-thumbnail" width="150">
+                        <h3 class="h5"></h3>
+                        <p class="text-gold mb-2">Customer Support Lead</p>
+                        <p class="text-muted">Precious handles all order inquiries and ensures your shopping experience is smooth.</p>
+                        <p class="mb-1"><i class="fas fa-envelope me-2 text-gold"></i> Precious@officehub.com</p>
+                        <p><i class="fas fa-phone me-2 text-gold"></i> Ext. 101</p>
+                    </div>
+                </div>
+                <!-- Two more team members -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Consistent with other pages) -->
+    <footer class="footer py-5 bg-dark-brown text-white">
+        <!-- Footer content from index.html -->
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Form validation
+        (function() {
+            'use strict';
+            
+            const form = document.getElementById('contactForm');
+            
+            form.addEventListener('submit', function(event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                } else {
+                    // Form submission handling would go here
+                    alert('Thank you for your message! We will respond within 24 hours.');
+                    form.reset();
+                }
+                
+                form.classList.add('was-validated');
+            }, false);
+        })();
+    </script>
+</body>
+</html>s
